@@ -62,7 +62,7 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
 				
 				SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
 			} else {
-				log.debug("Token is not validated !!");
+				System.out.println("Token is not validated !!");
 			}
 				
 		}

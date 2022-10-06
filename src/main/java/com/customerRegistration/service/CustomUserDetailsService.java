@@ -24,18 +24,18 @@ public class CustomUserDetailsService implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		
-		log.info("Start loadUserByUsername");
+		System.out.println("Start loadUserByUsername");
 
 		com.customerRegistration.model.User user = loginRepository.findByUsername(username);
 
 		if (user == null) {
 
-			log.debug("User not found:" + username);
+			System.out.println("User not found:" + username);
 			throw new UsernameNotFoundException("User not found !!");
 		}
-		log.debug("User found: " + user.getUsername());
+		System.out.println("User found: " + user.getUsername());
 		
-		log.info("end loadUserByUsername");
+		System.out.println("end loadUserByUsername");
 
 		return new User(user.getUsername(), user.getPassword(), new ArrayList<>());
 	}

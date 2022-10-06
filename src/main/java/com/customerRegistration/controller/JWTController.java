@@ -48,8 +48,8 @@ public class JWTController {
 	@PostMapping("/authenticate")
 	public ResponseEntity<?> generateToken(@RequestBody User authenticationRequest) throws Exception {
 
-		log.info("Start generateToken");
-		log.debug(authenticationRequest.getUsername() + " " + authenticationRequest.getPassword());
+		System.out.println("Start generateToken");
+		System.out.println(authenticationRequest.getUsername() + " " + authenticationRequest.getPassword());
 		try {
 			authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
 					authenticationRequest.getUsername(), authenticationRequest.getPassword()));
@@ -64,9 +64,9 @@ public class JWTController {
 
 		String token = jwtUtil.generateToken(userDetails);
 
-		log.debug("JWT Token: " + token);
+		System.out.println("JWT Token: " + token);
 		
-		log.info("end generateToken");
+		System.out.println("end generateToken");
 
 		return ResponseEntity.ok(new JWTResponse(token));
 	}
@@ -81,10 +81,10 @@ public class JWTController {
 
 	@PostMapping("/validate")
 	public String validateToken(@RequestBody JWTResponse response) {
-		log.info("start validateToken");
+		System.out.println("start validateToken");
 		String token=response.getToken();
-		log.debug(token);
-		log.info("End validateToken");
+		System.out.println(token);
+		System.out.println("End validateToken");
 		//System.out.println(userDetails.getUsername());
 		boolean res= jwtUtil.validateToken(token, userDetails);
 		if(res) {
