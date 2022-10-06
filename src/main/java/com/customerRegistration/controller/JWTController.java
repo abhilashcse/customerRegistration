@@ -45,7 +45,7 @@ public class JWTController {
 	 * }
 	 */
 
-	@PostMapping("/authenticate")
+	@PostMapping("/login")
 	public ResponseEntity<?> generateToken(@RequestBody User authenticationRequest) throws Exception {
 
 		System.out.println("Start generateToken");
