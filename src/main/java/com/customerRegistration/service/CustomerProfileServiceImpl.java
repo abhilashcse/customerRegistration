@@ -2,6 +2,7 @@ package com.customerRegistration.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -199,6 +200,15 @@ public class CustomerProfileServiceImpl {
 			errorResponse.setName("DOB");
 			errorResponse.setDetail("DOB is incorrect or missing");
 
+			listErrorResponse.add(errorResponse);
+		}
+		
+		Optional<User> userOpt= customerProfileRepository.findByUsername(customerProfileDTO.getUsername());
+		if(userOpt.isPresent()) {
+			ErrorResponse errorResponse = new ErrorResponse();
+			errorResponse.setName("UserName");
+			errorResponse.setDetail("UserName is already present");
+			
 			listErrorResponse.add(errorResponse);
 		}
 
