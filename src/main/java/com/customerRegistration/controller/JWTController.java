@@ -37,7 +37,7 @@ public class JWTController {
 	private UserDetails userDetails;
 	
 	/*
-	 * POST: localhost:8084/authenticate
+	 * POST: localhost:8084/login
 	 * 
 	 * {
 	 *     "username" : "admin",

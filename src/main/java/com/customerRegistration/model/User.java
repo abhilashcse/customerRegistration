@@ -107,5 +107,13 @@ public class User {
 	public void setMobileNo(String mobileNo) {
 		MobileNo = mobileNo;
 	}
+	public User(Integer id, String username, String password) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.password = password;
+	}
+	
+	
 	
 }

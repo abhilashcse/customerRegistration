@@ -1,16 +1,11 @@
 package com.customerRegistration.model;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-
 import lombok.Getter;
 import lombok.Setter;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
 @EqualsAndHashCode
