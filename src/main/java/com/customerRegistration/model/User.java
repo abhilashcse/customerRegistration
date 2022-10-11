@@ -113,6 +113,10 @@ public class User {
 		this.username = username;
 		this.password = password;
 	}
+	public User() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	
 	
 	
