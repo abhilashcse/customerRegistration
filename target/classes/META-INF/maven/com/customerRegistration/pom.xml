@@ -82,11 +82,6 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
@@ -113,6 +108,17 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.4.0.905</version>
+			</plugin>
+			<!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.1</version>
+			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -139,7 +145,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>authorizationService</finalName>
+		<finalName>customerRegistration</finalName>
 	</build>
 
 	<dependencyManagement>

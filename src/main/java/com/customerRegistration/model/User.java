@@ -6,19 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-
-
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
-@Getter
-@Setter
-@EqualsAndHashCode
 @Table(name="customer_profile")
 public class User {
 	@Id 
@@ -116,6 +104,22 @@ public class User {
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+	public User(Integer id, String name, String username, String password, String address, String state, String country,
+			String emailAddress, String pan, String dateOfBirth, String accountType, String mobileNo) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.username = username;
+		this.password = password;
+		this.address = address;
+		this.state = state;
+		this.country = country;
+		this.emailAddress = emailAddress;
+		this.pan = pan;
+		this.dateOfBirth = dateOfBirth;
+		this.accountType = accountType;
+		MobileNo = mobileNo;
 	}
 	
 	

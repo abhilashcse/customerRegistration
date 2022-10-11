@@ -1,14 +1,5 @@
 package com.customerRegistration.model;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-
-
-@Getter
-@Setter
-@EqualsAndHashCode
 public class JWTResponse {
 
 	private String token;
